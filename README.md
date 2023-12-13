@@ -1,5 +1,6 @@
 # AmitalTech-FrontEnd
 Amital Tech home assignment
+Dror Granot 0503576232
 
 <img width="960" alt="image" src="https://github.com/DrorGr/AmitalTech-FrontEnd/assets/81293610/bb8d893d-dba2-4ab5-a542-ae1192e82c90">
 
