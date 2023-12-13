@@ -1,0 +1,16 @@
+<div class="user-counter-container">
+  <table class="user-counter-table">
+    <tr class="user-counter-table-row">
+      <th class="user-counter-table-header">שם משתמש:</th>
+      <div class="users-data" *ngFor="let userTaskCount of userTaskCounts">
+        <td>{{ userTaskCount.userName }}</td>
+      </div>
+    </tr>
+    <tr class="user-counter-table-row">
+      <th class="user-counter-table-header">כמות משימות:</th>
+      <div class="users-data" *ngFor="let userTaskCount of userTaskCounts">
+        <td>{{ userTaskCount.taskCount }}</td>
+      </div>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,20 @@
+<div class="tasks-list-container">
+  <div *ngFor="let task of tasks" class="task-main-container">
+    <div class="task-input-field">
+      <p>נושא:</p>
+      <input type="text" value="{{ task.subject }}" readonly />
+    </div>
+    <div class="task-input-field">
+      <p>משתמש:</p>
+      <input type="text" value="{{ task.userName }}" readonly />
+    </div>
+    <div class="task-input-field">
+      <p>תאריך יעד:</p>
+      <input type="date" value="{{ task.targetDate | date : 'yyyy-MM-dd' }}" readonly />
+    </div>
+    <div class="task-input-field checkbox">
+      <p>בוצע:</p>
+      <input class="checkbox-button" [checked]="task.isCompleted ? true : false" type="checkbox" readonly />
+    </div>
+  </div>
+</div>

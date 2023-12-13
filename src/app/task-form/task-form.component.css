@@ -1,0 +1,33 @@
+.btn-save {
+  width: 100%;
+}
+.task-form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+
+  width: 18vw;
+  height: fit-content;
+}
+.form-checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+  width: 10vw;
+}
+input {
+  height: 1.5vw;
+  width: 400vw;
+  cursor: pointer;
+}
+
+.input-field {
+  width: 18vw;
+  border-radius: 10px;
+}

@@ -1,0 +1,89 @@
+.tasks-list-container {
+  height: fit-content;
+  max-height: calc(100vh - 100px);
+  overflow: scroll;
+  overflow-x: hidden;
+  width: 70vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  border: 1px solid black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  gap: 10px;
+  margin-right: 10px;
+  background-color: #f2f2f2;
+}
+
+.task-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.task-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 4px;
+  padding: 20px;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 5px 5px 5px #d7d7d7;
+  width: 16vw;
+  height: 12vh;
+  &:hover {
+    background-color: #dfdfdf;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.task-input-field {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 5vh;
+  align-items: center;
+}
+.task-input-field input {
+  width: 10vw;
+  text-align: center;
+  &:hover {
+    background-color: #e6e6e6;
+  }
+}
+.task-input-field.checkbox input {
+  height: 1.5vw;
+  cursor: grab;
+  &:hover {
+    background-color: #e6e6e6;
+  }
+}
+.save-button button {
+  position: relative;
+  border: 1px solid black;
+  background-color: #f2f2f2;
+  box-shadow: 5px 5px 5px #888888;
+  width: 100%;
+  height: 4vh;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    background-color: #e6e6e6;
+  }
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #ffffff;
+  text-wrap: wrap;
+  text-overflow: ellipsis;
+  &:hover {
+    background-color: #e6e6e6;
+  }
+}

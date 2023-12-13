@@ -1,0 +1,39 @@
+<form [formGroup]="userForm" (ngSubmit)="saveUserData()" class="task-form-container">
+  <p>
+    <mat-form-field class="input-field">
+      <mat-label matSuffix>נושא:</mat-label>
+      <input matInput formControlName="subject" required />
+      <mat-hint>הכנס נושא</mat-hint>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field class="input-field">
+      <mat-label matSuffix>משתמש</mat-label>
+      <input type="text" aria-label="Users" matInput [formControl]="myControl" [matAutocomplete]="auto" required />
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{ option }}
+        </mat-option>
+      </mat-autocomplete>
+      <mat-icon matSuffix style="color: rgb(134, 134, 134)">arrow_drop_down_circle</mat-icon>
+      <mat-hint>בחר משתמש</mat-hint>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field class="input-field">
+      <mat-label>תאריך יעד</mat-label>
+      <input matInput [matDatepicker]="datepicker" formControlName="targetDate" />
+      <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+      <mat-datepicker #datepicker></mat-datepicker>
+      <mat-hint>הזן תאריך יעד</mat-hint>
+    </mat-form-field>
+  </p>
+
+  <section class="user-section">
+    <mat-checkbox formControlName="isCompleted">משימה הושלמה</mat-checkbox>
+  </section>
+  <br />
+  <button mat-raised-button extended color="primary" type="submit" [disabled]="userForm.invalid" class="button-save">שמור</button>
+</form>
